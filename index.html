@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flex</title>
+	<link rel="stylesheet" type="text/css" href="flexbox_project.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@font-face {
+			font-family: Tannenberg Fett;
+			src: url('font/Tannenberg Fett.ttf');
+		}
+
+		@font-face {
+			font-family: Abibas;
+			src: url('font/Abibas.otf');
+		}
+
+		body {
+			font-family: Abibas;
+			background-color: black;
+			color: #bababa;
+		} 
+
+		/*header, footer, nav, .content, .advs, .article, .adv {
+			border: 1px white solid;
+		}*/
+
+		header {
+			font-family: Tannenberg Fett;
+			font-size: 75px;
+			text-align: center;
+			color: white;
+			margin: 15px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		header img {
+			width: 15%;
+		}
+
+		.main {
+			display: flex;
+		}
+
+		nav {
+			flex: 100px;
+			font-family: Abibas;
+		}
+
+		nav p {
+			font-family: Tannenberg Fett;
+			font-size: 30px;
+			margin: 5px;
+			color: white;
+		}
+
+		nav a {
+			text-decoration: none;
+			color: #bababa;
+		}
+
+		nav a:hover {
+			color: white;
+		}
+
+		.content {
+			flex: 60%;
+			display: flex;
+		}
+
+
+		.articles {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+		}
+
+		.article {
+			flex: 1;
+			background-color: #424242;
+			border-radius: 30px;
+			margin: 10px;
+			padding: 10px;
+			text-align: center;
+		}
+
+		.article div {
+			border-radius: 30px;
+		}
+
+		.article img {
+			border-top-right-radius: 30px;
+			border-top-left-radius: 30px;
+		}
+
+		@keyframes Show
+		{
+		    from { opacity: 1 }
+		    33% { opacity: 0.5 }
+		    33% { opacity: 0 }
+		    to { opacity: 0.5 }
+		}
+
+		.advs {
+			flex: 10%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.adv {
+			margin: 10px;
+		}
+
+		.adv img {
+			animation: Show 4s infinite;
+		}
+
+
+		footer {
+			display: flex;
+			align-items: center;
+		}
+
+		footer img {
+			width: 5%;
+		}
+
+
+
+		/*Адаптивность*/
+		@media (min-width: 640px) and (max-width: 1100px) {
+			.advs {
+				display: none;
+			}
+
+			.main {
+				flex-direction: column;
+			}
+
+			nav ul li {
+				float: left;
+				list-style-type: none;
+				margin: 5px;
+			}
+		}
+
+		@media (max-width: 750px) {
+			.content {
+			flex-direction: column;
+			}
+
+			nav p {
+				display: none;
+			}
+
+			nav ul a {
+				float: left;
+				list-style-type: none;
+				margin: 5px;
+			}
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		<img src="https://cdn.icon-icons.com/icons2/2200/PNG/512/gamer_avatar_icon_133991.png">
+		<div>Top-7 PC games</div>
+	</header>
+
+	<div class="main">
+		<nav>
+		<p>Меню</p>
+			<ul>
+				<a href="#GTA"><li>Grand Theft Auto V</li></a>
+				<a href="#Assassin"><li>Assassin's Creed II</li></a>
+				<a href="#Minecraft"><li>Minecraft</li></a>
+				<a href="#Call of Duty"><li>Call of Duty: Modern Warfare 2</li></a>
+				<a href="#Skyrim"><li>The Elder Scrolls V: Skyrim</li></a>
+				<a href="#Battlefield"><li>Battlefield 3</li></a>
+				<a href="#S.T.A.L.K.E.R. 2"><li>S.T.A.L.K.E.R. 2</li></a>
+			</ul>
+		</nav>
+		<div class="content">
+			<div class="articles">
+				<a name="GTA"></a>
+				<div class="article">
+					<img src="https://i19.kanobu.ru/c/9b78be6f4896019b6d8e8ed7c947a653/200x284/u.kanobu.ru/games/265cd307-6821-43b4-a74f-81e2242c2cc3.jpg">
+					<div>Grand Theft Auto V (она же GTA 5 или GTA V) — пятнадцатая игра из серии Grand Theft Auto, выполненная в жанре Action/Sandbox. Впервые в истории серии в игре присутствуют сразу три главных героя, между которыми можно переключаться почти в любое время. Игроку предоставлена полная свобода действий - он может путешествовать по городу и его окрестностям, грабить прохожих, воровать машины - или же жить простой жизнью обычного человека. Каждый из героев имеет свои уникальные особенности - один может замедлять время, пока едет на машине, второй умеет замедлять время в перестрелках, ну а третий может становиться безумным берсерком, увеличивая наносимый врагам урон.</div><br>
+				</div>
+
+				<a name="Assassin"></a>
+				<div class="article">
+					<img src="https://i08.kanobu.ru/c/7786d4e1affedc9c463bc116a60cb156/200x284/u.kanobu.ru/games/47/9efa648581fc421faae618303bec9214">
+					<div>Assassin's Creed II – это приключенческий экшен от третьего лица. Действие игры происходит в средние века в Италии. Современный потомок величайших убийц в истории Дезмонд оказывается в теле Эцио Аудиторе де ла Фиренце, мастерски владеющего хашшашинскими навыками. Разработчики предлагают игрокам улучшенную и обновленную геймплейную систему из первой части серии - Эцио все так же может перемещаться как по земле, так и по крышам, научился плавать, и обновил свой арсенал навыков и приспособлений.</div><br>
+				</div>
+			</div>
+
+			<div class="articles">
+
+				<a name="Minecraft"></a>
+				<div class="article">
+					<img src="https://i13.kanobu.ru/c/e763040eafe3b2fdab15ae685c7761a8/200x284/u.kanobu.ru/games/96/098131019914445f93d5a107a3e4b1b7">
+					<div>Minecraft - это инди-игра в жанре песочницы с элементами выживания и открытым миром. По стилю, мир игры полностью состоит из блоков (ландшафт, предметы, мобы, игрок), и для текстурирования используются текстуры с низким разрешением (16×16 текселей). Изначально игра разработана шведским программистом Маркусом Перссоном , известным также как «Notch». Игра была задумана как клон игры Infiniminer, хотя Перссон выражал желание уподобить её геймплей игре Dwarf Fortress. Игра написана на Java с использованием библиотеки LWJGL.<br>
+					Геймплей в игре прост - игроки добывают ресурсы, чтобы строить дома, замки и целые города. Ограничений в Minecraft фактически нет, кроме высоты уровня - в остальном игроки вольны творить все, что пожелают.<br>
+					Кроме компьютерной версии Minecraft так же имеет особые мобильные версии для смартфонов, версию для PS Vita, и версии для консолей, каждая из по-своему. которых отличается от стандартной версии.</div><br>
+				</div>
+
+				<a name="Call of Duty"></a>
+				<div class="article">
+					<img src="https://i14.kanobu.ru/c/9f296f29f914d2b9d57c9af132020d65/200x284/u.kanobu.ru/games/22/0189802f6a94494f8345de776090bf67">
+					<div>Call of Duty: Modern Warfare 2 - продолжение одной из самых популярных игр в серии Call of Duty. Сюжетная кампания продолжает историю оригинальной игры, в которой игроки останавливали ультраправого националиста, грозившего уничтожить США ядерной ракетой. Во второй части игроку предстоит побывать среди лачуг на шумных улочках Рио-де-Жанейро, в заснеженных горах России, на пыльных афганских дорогах и в других неожиданных и экстраординарных местах. Многие огрехи прошлой части устранены: враги теперь не "рождаются" бесконечно, на экране всегда присутствует значок, показывающий, куда и за кем идти.</div><br>
+				</div>
+			</div>
+
+			<div class="articles">
+
+				<a name="Skyrim"></a>
+				<div class="article">
+					<img src="https://i12.kanobu.ru/c/93b1762f2d993f2d4a10b489c0b6cf81/200x284/u.kanobu.ru/games/92/ce6661067e1c4efcbc53abff988ce988">
+					<div>The Elder Scrolls V: Skyrim - это приключенческая ролевая игра, пятая часть в серии The Elder Scrolls, с огромным открытым миром, который с самого начала полностью доступен для исследования. Игрокам предстоит выступить в роли Довакина, Драконорожденного, который появляется в провинции Скайрим аккурат во время возвращения легендарных драконов, которые, по преданию, собираются разрушить мир. Довакину предстоит преодолеть множество трудностей на пути к своей цели - остановить драконьего повелителя Алдуина, который готовится обрушить свою ярость на весь мир.</div><br>
+				</div>
+
+				<a name="Battlefield"></a>
+				<div class="article">
+					<img src="https://i20.kanobu.ru/c/a2a886ebf4e24c71f3a8c97857cab049/200x284/u.kanobu.ru/games/42/120816e1b1474d8aad3ed0fa663c0e8f">
+					<div>Battlefield 3 - продолжение популярной серии сетевых шутеров, которое создан на движке Frostbite 2.0, который призван отвечать за тотальное изничтожение всего и вся на карте.  В сетевой части Battlefield 3 смогут сойтись до 64 человек, реализованы 24 вида транспорта и 17 видов оружия, которые игроки могут задействовать на десятке разных карт, от больших до маленьких. Игроки могут сражаться как пешком, так и используя различную военную технику - от броневиков и до танков.</div><br>
+				</div>
+
+				<a name="S.T.A.L.K.E.R. 2"></a>
+				<div class="article">
+					<img src="https://i08.kanobu.ru/c/e9d5620281d8058e90e1fddf07b1ea4d/200x284/u.kanobu.ru/games/73/cd9af503d719435d911bc27d80accaaf">
+					<div>S.T.A.L.K.E.R. 2 - это продолжение серии славянских ролевых шутеров, построенных вокруг баек и слухов о Чернобыльской Катастрофе 1986 года. После отмены проекта в декабре 2011 года игра была анонсирована вновь в мае 2018.</div><br>
+				</div>
+			</div>
+		</div>
+		<div class="advs">
+			<div class="adv">
+				Начни прямо сейчас!
+				<img src="https://i17.kanobu.ru/c/1d3867bce898d4cbbfb7cebe651a8589/200x284/u.kanobu.ru/games/46/d0413559fc034463b46e48b628951779">
+			</div>
+			<div class="adv">
+				Адам Дженсен ждёт, когда ты начнешь!
+				<img src="https://i17.kanobu.ru/c/9985307987396b208a64c7e7c148f258/200x284/u.kanobu.ru/games/71/b2f43ba9638145e2b19dba0d1bf872f1">
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<img src="https://cdn.icon-icons.com/icons2/2200/PNG/512/gamer_avatar_icon_133991.png">
+		<div>ITgenic Corporation. 2020</div>
+	</footer>
+</body>
+</html>
