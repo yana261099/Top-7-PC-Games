@@ -5,14 +5,14 @@
 	<link rel="stylesheet" type="text/css" href="flexbox_project.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
-		@font-face {
+		@font-face{
 			font-family: Tannenberg Fett;
-			src: url('Tannenberg Fett.ttf');
+			src: url('font/Tannenberg Fett.ttf');
 		}
 
-		@font-face {
+		@font-face{
 			font-family: Abibas;
-			src: url('Abibas.otf');
+			src: url('font/Abibas.otf');
 		}
 
 		body {
@@ -139,6 +139,10 @@
 				flex-direction: column;
 			}
 
+			nav {
+				text-align: center;
+			}
+
 			nav ul li {
 				float: left;
 				list-style-type: none;
@@ -151,10 +155,18 @@
 				display: none;
 			}
 
+			header {
+				font-size: 40px;
+			}
+
+			header img {
+				width: 30%;
+			}
+
 			.main {
 				flex-direction: column;
 			}
-			
+
 			.content {
 				flex-direction: column;
 			}
@@ -169,7 +181,8 @@
 				margin: 5px;
 			}
 		}
-		
+
+
 	</style>
 </head>
 <body>
